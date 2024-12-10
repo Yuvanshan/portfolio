@@ -1,0 +1,41 @@
+.bottom-menu {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    background-color: #007bff;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+  }
+  
+  .menu-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    font-size: 12px;
+    transition: color 0.3s ease;
+  }
+  
+  .menu-item:hover {
+    color: #cce4ff;
+  }
+  
+  .menu-item span {
+    margin-top: 4px;
+    font-size: 10px;
+  }
+  
+  /* Media query for larger screens */
+  @media (min-width: 768px) {
+    .bottom-menu {
+      display: none; /* Hide bottom menu on larger screens */
+    }
+  }
+  

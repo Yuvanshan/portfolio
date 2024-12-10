@@ -1,0 +1,99 @@
+.portfolio {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 70vh;
+
+}
+/* heading */
+.portfolio span:nth-of-type(1) {
+  color: var(--black);
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.portfolio span:nth-of-type(2) {
+  color: var(--orange);
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+/* slider */
+.portfolio .swiper{
+    overflow: visible!important;
+}
+
+.portfolio-slider {
+  margin-top: 3rem;
+  width: 100%;
+}
+
+.portfolio-slider .swiper-slide {
+  width: 20rem;
+}
+.portfolio img {
+  width: 19rem;
+  filter: drop-shadow(-12px 15px 13px rgba(0, 0, 0, 0.25));
+  border-radius: 19px;
+}
+
+.portfolio-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+  flex-wrap: wrap; /* Ensures buttons stack on smaller screens */
+}
+
+.portfolio-button {
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  color: white;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  flex: 1; /* Makes buttons flexible */
+  min-width: 120px; /* Ensures buttons don’t shrink too much */
+  max-width: 200px; /* Prevents buttons from stretching too wide */
+}
+
+.portfolio-button:hover {
+  background-color: #0056b3;
+}
+
+.github-button {
+  background-color: #333;
+}
+
+.github-button:hover {
+  background-color: #000;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .portfolio-buttons {
+    gap: 5px; /* Reduce gap on smaller screens */
+  }
+
+  .portfolio-button {
+    font-size: 12px; /* Smaller text size on smaller screens */
+    padding: 8px 16px; /* Adjust padding for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .portfolio-buttons {
+    flex-direction: column; /* Stack buttons vertically on very small screens */
+    gap: 10px;
+  }
+
+  .portfolio-button {
+    width: 100%; /* Buttons take up full width */
+    max-width: none; /* Disable max-width to allow full width */
+  }
+}
